@@ -1,5 +1,5 @@
 import React from "react";
-import CV_thanakorn from "../assets/download/CV_thanakorn.pdf"; // ตรวจสอบว่านำเข้าถูกต้อง
+import CV_thanakorn from "../assets/image/01.jpg"; // ตรวจสอบว่านำเข้าถูกต้อง
 
 const Header = () => {
   const menufunction = () => {
@@ -10,7 +10,7 @@ const Header = () => {
   return (
     <nav id="header">
       <div className="nav-logo">
-        <p className="nav-name">Thanakorn</p>
+        <p className="nav-name">Eletronic Equipment</p>
         <span>.</span>
       </div>
       <div className="nav-menu" id="myNavMenu">
@@ -27,23 +27,17 @@ const Header = () => {
           </li>
           <li>
             <a href="#project" className="nav-link">
-              Project
+              Popular
             </a>
           </li>
           <li>
             <a href="#contact" className="nav-link">
-              Contact
+              Review
             </a>
           </li>
         </ul>
       </div>
-      <div className="nav-button">
-        <a href={CV_thanakorn} target="_blank">
-          <button className="btn">
-            Download CV <i className="uil uil-download-alt"></i>
-          </button>
-        </a>
-      </div>
+      
       <div className="nav-menu-btn">
         <i className="uil uil-bars" onClick={menufunction}></i>
       </div>

@@ -259,8 +259,9 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 150px;
-  height: 50px;
+  display: flex;
+  width: 300px;
+  height: 150px;
   gap: 5px;
   text-decoration: none;
   color: var(--text-color-second);
@@ -274,38 +275,52 @@ nav {
 
 /* ----- MAIN BOX ----- */
 .section {
-  padding-block: 5em;
+  padding: 40px 20px;
+  background-color: #f9f9f9; /* สีพื้นหลัง */
 }
+
+.top-header h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
 .row {
   display: flex;
   justify-content: space-between;
-  width: 100%;
-  gap: 50px;
-}
-.col {
-  display: flex;
-  width: 50%;
+  margin-top: 20px;
 }
 
-/* -- ## --- RESUABLE CSS -- ## -- */
-.top-header {
-  text-align: center;
-  margin-bottom: 5em;
+.col {
+  flex: 1;
+  margin: 0 15px; /* ระยะห่างระหว่างคอลัมน์ */
 }
-.top-header h1 {
-  font-weight: 600;
-  color: var(--text-color-second);
-  margin-bottom: 10px;
+
+.about-info {
+  background-color: #ffffff; /* สีพื้นหลังของข้อมูล */
+  padding: 20px;
+  border-radius: 5px; /* มุมมน */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* เงา */
 }
-.top-header span {
-  color: #999;
+
+.about-info h3 {
+  margin-top: 0;
 }
-h3 {
-  font-size: 20px;
-  font-weight: 600;
-  color: var(--text-color-second);
-  margin-bottom: 15px;
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff; /* สีพื้นหลังของปุ่ม */
+  color: white; /* สีตัวอักษร */
+  text-decoration: none; /* ไม่มีเส้นใต้ */
+  border-radius: 5px; /* มุมมน */
+  transition: background-color 0.3s; /* การเปลี่ยนสี */
 }
+
+.btn:hover {
+  background-color: #0056b3; /* เปลี่ยนสีเมื่อ hover */
+}
+
 
 /* ----- ABOUT INFO ----- */
 .about-info {
@@ -381,7 +396,7 @@ h3 {
 }
 .project-box > i {
   font-size: 50px;
-  color: #00b5e7;
+  color: #94cb52;
   margin-bottom: 25px;
 }
 .project-box label {
@@ -471,7 +486,7 @@ h3 {
   outline: none;
 }
 textarea {
-  width: 100%;
+  width: 50%;
   height: 250px;
   background: transparent;
   border: 2px solid #aaa;
@@ -488,7 +503,7 @@ textarea {
   color: var(--color-white);
 }
 .form-button > .btn:hover {
-  background: #00b5e7;
+  background: #cbb260;
 }
 .form-button i {
   font-size: 18px;
@@ -497,38 +512,60 @@ textarea {
 
 /* ----- FOOTER BOX ----- */
 footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  row-gap: 30px;
-  background: #f8f8f8;
-  padding-block: 40px 60px;
+  background-color: #f8f9fa; /* สีพื้นหลัง */
+  padding: 20px;
+  text-align: center;
 }
-.top-footer p {
-  font-size: 25px;
-  font-weight: 600;
+
+.top-footer h2 {
+  margin: 0;
+  font-size: 24px;
 }
-.middle-footer .footer-menu {
-  display: flex;
+
+.middle-footer {
+  margin: 10px 0;
 }
-.footer_menu_list {
+
+.footer-menu {
   list-style: none;
+  padding: 0;
 }
-.footer_menu_list a {
+
+.footer-menu li {
+  display: inline;
+  margin: 0 15px;
+}
+
+.footer-menu a {
   text-decoration: none;
-  color: var(--text-color-second);
-  font-weight: 500;
-  margin-inline: 20px;
+  color: #333; /* สีตัวอักษร */
 }
+
 .footer-social-icons {
   display: flex;
-  gap: 30px;
+  gap: 20px;
+  justify-content: center;
+  margin: 15px 0;
 }
+
+.footer-social-icons .icon {
+  margin: 0 10px;
+  color: #333; /* สีไอคอน */
+}
+
+.footer-social-icons .icon:hover {
+  color: #007bff; /* เปลี่ยนสีเมื่อ hover */
+}
+
 .bottom-footer {
-  font-size: 14px;
-  margin-top: 10px;
+  margin-top: 15px;
 }
+
+.bottom-footer p {
+  margin: 0;
+  font-size: 14px;
+}
+
 
 /* ----- MEDIA QUERY == 1024px / RESPONSIVE ----- */
 @media only screen and (max-width: 1024px) {
@@ -557,7 +594,7 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(221, 150, 150, 0.7);
     backdrop-filter: blur(20px);
     width: 100%;
     min-height: 450px;

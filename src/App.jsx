@@ -60,10 +60,10 @@ function App() {
 
     // type Effect
     const typingEffect = new Typed(".typedText", {
-      strings: ["Lecturer", "Developer", "Researcher"],
+      strings: ["Welcome To"," My Shop", "ElectronicShop"],
       loop: true,
       typeSpeed: 100, // Fixed typo 'typSpeed' to 'typeSpeed'
-      backSpeed: 80, // Fixed typo 'backspeed' to 'backSpeed'
+      backSpeed: 100, // Fixed typo 'backspeed' to 'backSpeed'
       backDelay: 2000,
     });
 
